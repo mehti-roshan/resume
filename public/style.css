@@ -759,14 +759,14 @@ video {
 }
 
 @font-face {
-  font-family: 'dana';
+  font-family: "dana";
 
-  src: url('dana.woff2');
+  src: url("dana.woff2");
 }
 
 * {
   line-height: 2;
-  font-family: 'dana';
+  font-family: "dana";
 }
 
 main {

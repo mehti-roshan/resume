@@ -4,13 +4,16 @@
   "description": "resume html page",
   "main": "index.js",
   "scripts": {
-    "build:css": "npx tailwindcss -i ./src/style.css -o ./public/style.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently 'npm:live-server' 'npm:build:css'",
+    "live-server": "npx live-server public",
+    "build:css": "npx tailwindcss -i ./src/style.css -o ./public/style.css --watch"
   },
   "author": "Mehti roshan",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "live-server": "^1.2.2",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.11"
   }
