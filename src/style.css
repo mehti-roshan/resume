@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "dana";
+  src: url("dana.woff2");
+}
+
+* {
+  @apply leading-loose;
+  font-family: "dana";
+}
+
+main {
+  @apply mx-auto my-8;
+  width: calc(1240px / 1.4);
+}
+
+ul {
+  @apply p-2 text-lg;
+}
+
+li {
+  @apply list-disc;
+}
+
+progress {
+  @apply h-1 w-40;
+}
+
+progress::-moz-progress-bar {
+  @apply bg-gradient-to-l from-green-500 to-customGreen;
+}
+
+progress::-webkit-progress-value {
+  @apply bg-gradient-to-l from-green-500 to-customGreen;
+}
+
+progress::-webkit-progress-bar {
+  @apply bg-gray-200;
+}
+
+a {
+  @apply text-customGreen font-bold;
+}
+
+@media print {
+  html {
+    @apply bg-gray-900;
+  }
+
+  main {
+    @apply my-0;
+    width: 100vw;
+  }
+}
